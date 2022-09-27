@@ -7,6 +7,7 @@
 
 import time
 source = 'prng-service.txt'
+destination = 'image-service.txt'
 is_running = True
 
 while is_running:
@@ -19,6 +20,10 @@ while is_running:
 
         with open(source, 'r') as f:
             value = f.read()
+
+        if value.isnumeric():
+            with open(destination, 'w') as f:
+                f.write(value)
             print(value)
 
     if run == 2:
