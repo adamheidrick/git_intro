@@ -12,6 +12,4 @@ while True:
         with open(source, 'w') as f:
             randy = str(random.randint(1, 100))
             f.write(randy)
-            print(randy)
     f.close()
-
