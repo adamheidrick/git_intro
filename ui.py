@@ -1,4 +1,4 @@
-
+from PIL import Image
 import time
 
 
@@ -26,7 +26,8 @@ def main():
                 with open(destination, 'r') as f:
                     path = f.read()
                     f.close()
-                print(path)
+                image = Image.open(path)
+                image.show()
 
         elif run == 2:
             is_running = False
