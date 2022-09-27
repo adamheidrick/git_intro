@@ -1,16 +1,17 @@
 # reads prng service text, if run, then generates random number and writes it to the .txt
 import random
+import time
 source = 'prng-service.txt'
 
 while True:
+    time.sleep(1)
     with open(source, 'r') as f:
         text = f.read()
-        f.close()
 
     if text == 'run':
-        randy = str(random.randint(1, 100))
         with open(source, 'w') as f:
+            randy = str(random.randint(1, 100))
             f.write(randy)
-            f.close()
-        print(randy)
+            print(randy)
+    f.close()
 
