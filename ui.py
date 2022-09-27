@@ -12,7 +12,7 @@ def main():
             with open(source, 'w') as f:
                 f.write('run')
                 f.close()
-                time.sleep(5)
+                time.sleep(3)
 
             with open(source, 'r') as f:
                 value = f.read()
@@ -21,13 +21,14 @@ def main():
                 with open(destination, 'w') as f:
                     f.write(value)
                     f.close()
-                    time.sleep(5)
+                    time.sleep(3)
 
                 with open(destination, 'r') as f:
                     path = f.read()
                     f.close()
                 image = Image.open(path)
                 image.show()
+                print(f'Your image is located at the following path:{path}')
 
         elif run == 2:
             is_running = False
