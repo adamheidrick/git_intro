@@ -1,10 +1,15 @@
-# reads image service text if num then writes path of image using random number to image-server text
 
-# While true:
-# Sleep for 1 second
-# Open image-service.txt
-# if(read image-service.txt == type(number))
-# copy number to local variable
-# Use Mod operator to mod number with number of images
-# Write path (ex : /users/cs361-images/{number}.jpg) to image-service.txt
-# Close file image-service.txt
+import time
+source = 'image-service.txt'
+
+while True:
+    time.sleep(1)
+    with open(source, 'r') as f:
+        text = f.read()
+        if text.isnumeric():
+            num = int(text)
+            print(num)
+            # TODO: Get num of images
+            # TODO: Mod num with num of images
+            # Write path to image-service.txt
+    f.close()
