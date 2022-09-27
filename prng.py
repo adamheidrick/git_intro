@@ -2,6 +2,8 @@
 import random
 import time
 source = 'prng-service.txt'
+
+
 def main():
     while True:
         time.sleep(1)
