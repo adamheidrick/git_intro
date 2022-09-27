@@ -6,6 +6,7 @@ image_list = os.listdir(path='images')
 cwd = os.getcwd()
 images = os.listdir(path='images')
 
+
 def main():
     while True:
         time.sleep(1)
