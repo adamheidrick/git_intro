@@ -29,4 +29,3 @@ while is_running:
     if run == 2:
         is_running = False
         print('End of Program')
-
